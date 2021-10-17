@@ -1,0 +1,43 @@
+
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+ 
+#include <stdio.h>
+
+int main()
+{
+    long numero = 1999;
+    //encode
+    long mask1 = 0b11111100000;
+    long mask2 = 0b00000011111;
+    long p1 = numero & mask1;
+    p1 = p1 >> 5;
+    long p2 = numero & mask2;
+    
+    int impulsi1 = p1;
+    int impulsi2 = p2;
+    
+    long durata = (impulsi1 + impulsi2+20+20)*20;
+    printf("durata ");
+    printf("%ld",durata);
+    printf("\n");
+    
+    
+    printf("%ld",p1);
+    printf(" ");
+    printf("%ld", p2);
+    
+    printf("\n");
+    
+    
+    // decode
+    long totale = ((p1) <<5)|(p2);
+    
+    printf("%ld",totale);
+    
+}
